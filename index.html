@@ -66,6 +66,11 @@
       display: block;
       position: relative;
       padding-left: 25px;
+      list-style: none; /* Firefox対策 */
+    }
+
+    summary::-webkit-details-marker {
+      display: none; /* Chrome、Safari対策 */
     }
 
     summary::before {
@@ -94,12 +99,12 @@
       margin-left: 1em;
       background-color: #fff;
       overflow: hidden;
-      transition: max-height 0.4s ease-in-out; /* transition時間を少し長く */
+      transition: max-height 0.4s ease-in-out;
       max-height: 0;
     }
 
     details[open] > .accordion_contents {
-      max-height: 800px; /* より大きな値を設定 */
+      max-height: 800px;
     }
   </style>
 </head>
